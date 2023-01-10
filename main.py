@@ -15,25 +15,37 @@ AUTO
 PSU
 Others
 
+#15%
 pe = 
-median_pe = []
+median_pe = #10year 
 sector_pe = 
+pe_points = 15*(0.67(median_pe/pe) + 0.33(sector_pe/pe))
 
-sales = []
-sales_growth = []
+#30%
+sales = [] #year 
+sales_growth = [] #atleast 3 times in 10 years, also factor of marketcap
 profit = []
-sales_growth = []
+profit_growth = [] #atleast 3 times
+ebita = []
+sales_points = 30*(())
 
-promotor_holding = []
+
+#20%
+promotor_holding = [] #year and >50% except banking
 institutional_holding = []
 public_holding = []
+holding_points1 = 15*(0.55*(promotor_holding) + 0.3*(institutional_holding) + 0.15*(public_holding))
+holding_points2 = 5*(100*(promotor_holding_change) + 100*(institutional_holding_change) - 100*(public_holding_change))
 
-roc = [] #Not for banks
-roce = []
+#20%
+roc = [] #Not for banks, min 15 
+roce = [] 
+roc_points = 20*((roc*0.45 + roce*0.55 - 15))
 
-borrowings = []
-interest_payment = []
-trade_receivables = 
+#15%
+borrowings = [] #must be less than 10% of marketcap
+interest_payment = [] 
+trade_receivables = []
 
 
 
