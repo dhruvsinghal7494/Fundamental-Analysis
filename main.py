@@ -1,4 +1,5 @@
-print("Hello world")
+import streamlit as st
+import plotly_exppress as px
 
 market_cap = int(input('Enter the marketcap: '))
 #if marketcap less than 5000cr, then penalty
@@ -48,6 +49,11 @@ interest_payment = []
 trade_receivables = []
 
 
+pe = st.number_input("Enter the current P/E: ")
+median_pe = st.number_input("Enter the median P/E of last 10 years: ")
+sector_pe = st.number_input("Enter the current sector P/E: ")
+
+merket_cap = st.number_input("Enter the current marketcap: ")
 
 
 
