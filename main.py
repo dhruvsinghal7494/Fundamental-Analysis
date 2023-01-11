@@ -53,10 +53,20 @@ pe = st.number_input("Enter the current P/E: ")
 median_pe = st.number_input("Enter the median P/E of last 10 years: ")
 sector_pe = st.number_input("Enter the current sector P/E: ")
 
-merket_cap = st.number_input("Enter the current marketcap: ")
+market_cap = st.number_input("Enter the current marketcap: ")
+sector = st.number_input("Enter the sector: ")
 
+sales = st.number_input("Enter the recent sales(in crores): ")
+sales2 = st.number_input("Enter the sales 10 years ago: ")
+profit = st.number_input("Enter the recent profit: ")
+profit2 = st.number("Enter the 10 years ago profit: ")
 
+roc = st.number_input("Enter th ROC: ")
+roce = st.number_input("Enter the ROCE: ")
 
+promotor_holding = st.number_input("Enter the current promoter holdings: ")
+institutional_holding  = st.number_input("Enter the current institutional holding: ")
+public_holding = 100 - promotor_holding - institutional_holding
 
 
 
