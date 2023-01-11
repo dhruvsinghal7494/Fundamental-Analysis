@@ -51,7 +51,7 @@ import streamlit as st
 pe = st.number_input("Enter the current P/E: ")
 median_pe = st.number_input("Enter the median P/E of last 10 years: ")
 sector_pe = st.number_input("Enter the current sector P/E: ")
-pe_points = 15*()
+pe_points = 15*((0.67*(median_pe/pe)) + 0.33*(sector_pe/pe))
 
 market_cap = st.number_input("Enter the current marketcap: ")
 sector = st.number_input("Enter the sector: ")
@@ -63,13 +63,19 @@ profit2 = st.number_input("Enter the 10 years ago profit: ")
 
 roc = st.number_input("Enter th ROC: ")
 roce = st.number_input("Enter the ROCE: ")
+roc_points = 20*(0.6*(roce-10) + 0.4*(roc-10))
 
 promotor_holding = st.number_input("Enter the current promoter holdings: ")
 institutional_holding  = st.number_input("Enter the current institutional holding: ")
 public_holding = 100 - promotor_holding - institutional_holding
 
+st.write("P/E points(out of 20) are: ", pe_points)
+st.write("Sales points(out of 35) are: ", sales_points)
+st.write("roc points(out of 25) are: ", roc_points)
+st.write("holding points(out of 20) are: ", hollding_points)
 
-
+total_points = pe_points + sales_points + roc_points + holding_points
+st.write("Total rating of the company is: ", total_points)
 
 
 
