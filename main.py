@@ -44,6 +44,7 @@ holding_points2 = 5*(100*(promotor_holding_change) + 100*(institutional_holding_
 #roce = [] 
 roc_points = 20*((roc*0.45 + roce*0.55 - 15))
 
+
 #15%
 #borrowings = [] #must be less than 10% of marketcap
 #interest_payment = [] 
